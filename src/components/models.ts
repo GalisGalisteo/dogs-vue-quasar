@@ -7,8 +7,6 @@ export interface DogInfo {
   dateCreated?: Date;
 }
 
-export const allSizes = ['very small', 'small', 'medium', 'big', 'very big'];
-
 export const allBreeds = [
   'affenpinscher',
   'african',
@@ -161,6 +159,8 @@ export const allBreeds = [
   'wolfhound irish',
 ];
 
+export const allSizes = ['Very Small', 'Small', 'Medium', 'Big', 'Very Big'];
+
 export const allColors = [
   'Brown',
   'Black',
@@ -170,3 +170,8 @@ export const allColors = [
   'Cream',
   'Spotted',
 ];
+
+export interface ValidatableObject {
+  validate(): boolean;
+  hasError: boolean;
+}

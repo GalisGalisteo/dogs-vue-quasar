@@ -56,7 +56,7 @@ const dogCards: DogInfo[] = [
   },
   {
     id: 5,
-    breed: 'terrier-tibetan',
+    breed: 'terrier tibetan',
     size: 'small',
     color: 'tan',
     image: 'https://images.dog.ceo/breeds/terrier-tibetan/n02097474_2554.jpg',
@@ -72,7 +72,7 @@ const dogCards: DogInfo[] = [
   },
   {
     id: 7,
-    breed: 'spitz-japanese',
+    breed: 'spitz japanese',
     size: 'large',
     color: 'cream',
     image: 'https://images.dog.ceo/breeds/spitz-japanese/tofu.jpg',
@@ -80,7 +80,7 @@ const dogCards: DogInfo[] = [
   },
   {
     id: 8,
-    breed: 'poodle-toy',
+    breed: 'poodle toy',
     size: 'extra large',
     color: 'white',
     image: 'https://images.dog.ceo/breeds/poodle-toy/n02113624_3344.jpg',

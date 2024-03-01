@@ -6,9 +6,9 @@
           <q-img :src="image" class="rounded-borders" ratio="1" width="300px" />
         </div>
         <q-card-section>
-          <div class="text-body2">{{ breed }}</div>
-          <div class="text-caption">{{ color }}</div>
-          <div class="text-caption">{{ size }}</div>
+          <div class="text-capitalize text-h6">{{ breed }}</div>
+          <div class="text-capitalize text-caption">{{ color }}</div>
+          <div class="text-capitalize text-caption">{{ size }}</div>
         </q-card-section>
       </q-card>
     </div>
