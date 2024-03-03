@@ -74,7 +74,7 @@
 <script setup lang="ts">
 import { useQuasar } from 'quasar';
 import { ref } from 'vue';
-import { DogInfo, ValidatableObject } from './models';
+import { DogInfo, ValidatableObject } from 'components/models';
 import { allColors, allSizes, allBreeds } from 'src/utils/utils';
 
 const $q = useQuasar();

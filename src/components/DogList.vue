@@ -17,8 +17,8 @@
 </template>
 
 <script setup lang="ts">
-import { DogInfo } from './models';
-import DogCard from './DogCard.vue';
+import { DogInfo } from 'components/models';
+import DogCard from 'components/DogCard.vue';
 
 defineProps<{ dogs: DogInfo[] }>();
 </script>

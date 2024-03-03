@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import { DogInfo } from './models';
+import { DogInfo } from 'components/models';
 
 defineProps<DogInfo & { width: string }>();
 </script>
