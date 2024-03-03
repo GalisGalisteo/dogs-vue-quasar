@@ -1,4 +1,5 @@
 export const allBreeds = [
+  '',
   'affenpinscher',
   'african',
   'airedale',
@@ -150,16 +151,24 @@ export const allBreeds = [
   'wolfhound irish',
 ];
 
-export const allSizes = ['Very Small', 'Small', 'Medium', 'Big', 'Very Big'];
+export const allSizes = [
+  '',
+  'Very Small',
+  'Small',
+  'Medium',
+  'Big',
+  'Very Big',
+];
 
 export const allColors = [
+  '',
   'Brown',
   'Black',
-  'White',
+  'Cream',
   'Golden',
   'Gray',
-  'Cream',
   'Spotted',
+  'White',
 ];
 
 export const createId = () =>

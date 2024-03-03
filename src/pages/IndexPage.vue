@@ -1,6 +1,33 @@
 <template>
   <q-page>
-    <dog-list :dogs="dogs" />
+    <div class="row justify-center q-px-md q-pt-md">
+      <q-input
+        class="col col-sm-2"
+        rounded
+        outlined
+        v-model="inputSearchDog"
+        label="Breed"
+      />
+      <q-select
+        class="col col-sm-2"
+        :options="allColors"
+        rounded
+        outlined
+        v-model="inputSearchColor"
+        label="Color"
+      />
+      <q-select
+        class="col col-sm-2"
+        :options="allSizes"
+        rounded
+        outlined
+        v-model="inputSearchSize"
+        label="Size"
+      />
+    </div>
+
+    <dog-list :dogs="filteredDogs" />
+
     <q-dialog v-model="dogFormShow">
       <div>
         <div class="row justify-center">
@@ -26,8 +53,8 @@
 import DogCardForm from 'src/components/DogCardForm.vue';
 import DogList from 'src/components/DogList.vue';
 import { DogInfo } from 'src/components/models';
-import { createId } from 'src/utils/utils';
-import { ref } from 'vue';
+import { createId, allColors, allSizes } from 'src/utils/utils';
+import { computed, ref } from 'vue';
 
 const dogsInfo: DogInfo[] = [
   {
@@ -114,6 +141,9 @@ const dogsInfo: DogInfo[] = [
 
 const dogs = ref<DogInfo[]>(dogsInfo);
 const dogFormShow = ref<boolean>(false);
+const inputSearchDog = ref<string>('');
+const inputSearchColor = ref<string>('');
+const inputSearchSize = ref<string>('');
 
 const handleFormSubmit = (data: DogInfo) => {
   data.id = createId();
@@ -121,4 +151,15 @@ const handleFormSubmit = (data: DogInfo) => {
   dogs.value.push(data);
   dogFormShow.value = false;
 };
+
+const filteredDogs = computed(() => {
+  return dogs.value.filter(
+    (v) =>
+      v.breed.toLowerCase().includes(inputSearchDog.value.toLowerCase()) &&
+      v.color
+        .toLowerCase()
+        .includes(inputSearchColor.value.toLocaleLowerCase()) &&
+      v.size.toLowerCase().includes(inputSearchSize.value.toLocaleLowerCase())
+  );
+});
 </script>

@@ -8,6 +8,7 @@
         :size="dog.size"
         :color="dog.color"
         :image="dog.image"
+        width="300px"
       />
     </div>
   </q-page>
